@@ -1,0 +1,144 @@
+
+Notas de PHP - Conceptos Básicos
+
+1. Hola Mundo en PHP
+
+En PHP, el primer paso para crear una página web dinámica es imprimir un texto en pantalla. El código básico para hacerlo es:
+
+<?php
+echo "Hola Mundo";
+?>
+
+- <?php ... ?>: Estos son los delimitadores de código PHP. Todo el código PHP debe estar dentro de estos delimitadores.
+- echo: Es una construcción de PHP que se usa para mostrar información en pantalla.
+
+Este es el ejemplo más sencillo para empezar a trabajar con PHP y ver el resultado en un navegador.
+
+2. Variables y Tipos de Datos
+
+En PHP, las variables se definen sin necesidad de especificar un tipo de dato, ya que PHP es un lenguaje de tipado dinámico. Para definir una variable, simplemente se utiliza el símbolo $ seguido del nombre de la variable.
+
+<?php
+$nombre = "Juan";       // string
+$edad = 30;             // int
+$precio = 15.99;        // float
+$activo = true;         // bool
+
+echo $nombre . " tiene " . $edad . " años.";
+?>
+
+En el ejemplo anterior:
+
+- $nombre es una variable de tipo string.
+- $edad es una variable de tipo int (entero).
+- $precio es una variable de tipo float (número decimal).
+- $activo es una variable de tipo bool (valor booleano, true o false).
+
+3. Estructuras de Control
+
+Las estructuras de control en PHP permiten tomar decisiones en el flujo de ejecución del código.
+
+- if y else: Se usan para realizar comprobaciones y ejecutar bloques de código si se cumplen ciertas condiciones.
+
+<?php
+$edad = 18;
+
+if ($edad >= 18) {
+    echo "Es mayor de edad.";
+} else {
+    echo "Es menor de edad.";
+}
+?>
+
+En este caso, si la edad es mayor o igual a 18, se imprime "Es mayor de edad", de lo contrario, se imprime "Es menor de edad".
+
+- switch: Es útil cuando tenemos varias condiciones que comparar con una misma variable.
+
+<?php
+$dia = 3;
+
+switch ($dia) {
+    case 1:
+        echo "Lunes";
+        break;
+    case 2:
+        echo "Martes";
+        break;
+    case 3:
+        echo "Miércoles";
+        break;
+    default:
+        echo "Día no válido";
+}
+?>
+
+4. Bucles (Loops)
+
+Los bucles permiten ejecutar un bloque de código varias veces. PHP ofrece tres tipos de bucles principales:
+
+- for: Este bucle se usa cuando se conoce cuántas veces se debe ejecutar el bloque de código.
+
+<?php
+for ($i = 1; $i <= 5; $i++) {
+    echo $i . " ";
+}
+?>
+
+- while: Este bucle se ejecuta mientras se cumpla una condición.
+
+<?php
+$i = 1;
+while ($i <= 5) {
+    echo $i . " ";
+    $i++;
+}
+?>
+
+- foreach: Es el bucle más utilizado para iterar sobre arrays, especialmente si los arrays son asociativos.
+
+<?php
+$colores = ["rojo", "verde", "azul"];
+
+foreach ($colores as $color) {
+    echo $color . " ";
+}
+?>
+
+5. Funciones
+
+Las funciones son bloques de código reutilizables que realizan tareas específicas. En PHP, se definen con la palabra clave function.
+
+<?php
+function saludar($nombre) {
+    return "Hola, " . $nombre;
+}
+
+echo saludar("Juan");
+?>
+
+En este caso, la función saludar() recibe un parámetro ($nombre) y devuelve un saludo.
+
+6. Arrays (Arreglos)
+
+Los arrays en PHP permiten almacenar múltiples valores en una sola variable.
+
+- Array indexado: Es un array cuyo índice es numérico (0, 1, 2, ...).
+
+<?php
+$colores = ["rojo", "verde", "azul"];
+echo $colores[1]; // Imprime "verde"
+?>
+
+- Array asociativo: Es un array donde cada valor está asociado a una clave (en lugar de un índice numérico).
+
+<?php
+$persona = [
+    "nombre" => "Juan",
+    "edad" => 30
+];
+echo $persona["nombre"]; // Imprime "Juan"
+?>
+
+Resumen
+
+Estos primeros apartados cubren lo básico de PHP: imprimir texto, trabajar con variables y tipos de datos, control de flujo con estructuras condicionales y bucles, definir funciones, y manejar arrays. Estos son los cimientos fundamentales para desarrollar aplicaciones web con PHP. A medida que avances, irás profundizando en temas más complejos como la orientación a objetos y el manejo de bases de datos.

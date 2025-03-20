@@ -1,0 +1,1 @@
+porque el \n no hacer enter en la impresion de variables -> con el <br> si funciona indifernetemente
